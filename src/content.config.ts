@@ -8,6 +8,17 @@ function removeDupsAndLowerCase(array: string[]) {
   return Array.from(distinctItems)
 }
 
+// 定义 docs 文档集合
+const docs = defineCollection({
+  // 加载 src/content/docs/ 目录下的 Markdown 和 MDX 文件
+  loader: glob({ base: './src/content/docs', pattern: '**/*.{md,mdx}' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+    order: z.number().default(0)
+  })
+})
+
 // Define blog collection
 const blog = defineCollection({
   // Load Markdown and MDX files in the `src/content/blog/` directory.
@@ -40,4 +51,4 @@ const blog = defineCollection({
     })
 })
 
-export const collections = { blog }
+export const collections = { blog, docs }

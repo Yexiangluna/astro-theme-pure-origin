@@ -12,8 +12,6 @@ import { defineConfig, fontProviders } from 'astro/config'
 // 导入数学公式渲染插件
 import rehypeKatex from 'rehype-katex'
 import remarkMath from 'remark-math'
-// 导入 Starlight 主题插件
-import starlightThemeObsidian from 'starlight-theme-obsidian'
 
 // 本地集成插件
 // 导入自动链接标题插件
@@ -35,9 +33,6 @@ import {
 } from './src/plugins/shiki-offical/transformers.ts'
 // 导入站点配置
 import config from './src/site.config.ts'
-
-// 导入 Starlight 集成
-import starlight from '@astrojs/starlight';
 
 // Astro 配置
 // https://astro.build/config
@@ -106,10 +101,6 @@ export default defineConfig({
 
   // [集成插件配置]
   integrations: [
-    // Starlight 必须在 mdx 之前加载
-    starlight({
-      title: 'Khalil Docs',
-    }), // Starlight 文档集成
     // astro-pure 会自动添加 sitemap, mdx 和 unocss
     // sitemap(),
     // mdx(),
