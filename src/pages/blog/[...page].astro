@@ -48,10 +48,13 @@ const paginationProps = {
   })
 }
 ---
+<!-- 实现了一个博客文章列表页面 -->
 
 <PageLayout {meta}>
+  {/* 返回按钮 */}
   <Button title='Back' href='/' variant='back' />
   <main class='mt-6 lg:mt-10'>
+    {/* 页面标题 */}
     <div id='content-header' class='animate'>
       <h1 class='mb-6 mt-6 text-3xl font-medium sm:mt-10'>Blog</h1>
     </div>
@@ -60,8 +63,9 @@ const paginationProps = {
         <p>No posts yet.</p>
       ) : (
         <div class='grid gap-y-16 sm:grid-cols-[3fr_1fr] sm:gap-x-8'>
+          {/* 主内容区:文章列表 */}
           <section aria-label='Blog posts list' class='animate' id='content'>
-            {/* header */}
+            {/* 列表头部:显示当前页码和文章统计 */}
             <div class='mb-3 flex flex-col justify-between text-sm sm:mb-5 sm:flex-row'>
               <span class='text-muted-foreground'>
                 Page {page.currentPage} - Showing {page.data.length} of {collectionsCount} posts
@@ -70,32 +74,32 @@ const paginationProps = {
                 View all posts by years →
               </a>
             </div>
-            {/* posts */}
+            {/* 文章列表 */}
             <ul class='flex flex-col gap-y-4 text-start'>
               {page.data.map((post) => (
                 <PostPreview {post} detailed />
               ))}
             </ul>
+            {/* 分页导航 */}
             <Paginator {...paginationProps} />
           </section>
 
-          {/* sidebar */}
+          {/* 侧边栏:标签列表 */}
           {!!uniqueTags.length && (
             <aside class='animate' id='sidebar'>
               <h2 class='mb-4 flex items-center text-lg font-medium'>
                 <Icon name='tag-2' class='me-2' />
                 Tags
               </h2>
+              {/* 标签列表:最多显示前50个标签 */}
               <ul class='text-bgColor flex flex-wrap gap-2'>
-                {
-                  // Only show top 50 tags in sidebar
-                  uniqueTags.slice(0, 50).map((tag) => (
-                    <li>
-                      <Button title={tag} href={`/tags/${tag}`} variant='pill' />
-                    </li>
-                  ))
-                }
+                {uniqueTags.slice(0, 50).map((tag) => (
+                  <li>
+                    <Button title={tag} href={`/tags/${tag}`} variant='pill' />
+                  </li>
+                ))}
               </ul>
+              {/* 查看全部标签链接 */}
               <span class='mt-4 block sm:text-end'>
                 <a aria-label='View all blog categories' href='/tags' data-astro-prefetch>
                   View all →
