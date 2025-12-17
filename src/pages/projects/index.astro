@@ -10,91 +10,96 @@ import alipay from '@/assets/alipay-qrcode.jpg'
 import KeyIcon from '@/assets/icons/key.svg'
 import wechat from '@/assets/wechat-qrcode.jpg'
 
+// 页面目录结构
 const headings = [
   { depth: 2, slug: 'programs', text: 'Programs' },
   { depth: 2, slug: 'learnings', text: 'Learnings' },
   { depth: 2, slug: 'others', text: 'Others' },
-  { depth: 2, slug: 'gpg-signature', text: 'GPG Signature' },
-  { depth: 2, slug: 'sponsorship', text: 'Sponsorship' }
+
 ]
 ---
 
 <PageLayout title='Projects' {headings} view>
+  <!-- GitHub 活动图表展示 -->
   <p>Github Activities:</p>
   <p>
-    <Image
-      src='https://ghchart.rshah.org/659eb9/cworld1'
+    <img
+      src='https://ghchart.rshah.org/659eb9/yexiangluna'
       alt='github activities'
-      inferSize
       loading='lazy'
     />
   </p>
   <p>
-    If you think it would be useful or interesting to collaborate on a project, you can donate to
-    support my work or contact me to discuss a project.
+    如果你认为合作项目会很有用或有趣，你可以或者联系我讨论一个项目。
   </p>
-  <Button title='Checkout sponsorship' class='w-fit' href='#sponsorship'>
-    <Icon class='size-5' name='receive-money' slot='before' />
-  </Button>
+  
 
+
+  <!-- 程序项目展示区 -->
+  
   <h2 id='programs'>Programs</h2>
+
   <ProjectSection
     projects={[
       {
-        name: '🎨 Astro Theme Pure',
-        description: 'A simple, fast and powerful blog & document theme built by Astro',
+        name: '',
+        description: '',
         links: [
-          { type: 'github', href: 'https://github.com/cworld1/astro-theme-pure' },
-          { type: 'site', href: 'https://astro-pure.js.org/' },
-          { type: 'doc', href: 'https://astro-pure.js.org/docs/list' },
-          { type: 'release', href: 'https://www.npmjs.com/package/astro-pure' }
+          { type: 'github', href: '' },
+          { type: 'site', href: '' },
+          { type: 'doc', href: '' },
+          { type: 'release', href: '' }
         ]
       },
       {
-        name: '💄 PKU Art',
-        description: 'A script to beautify pku course website',
+        name: '',
+        description: '',
         links: [
-          { type: 'github', href: 'https://github.com/zhuozhiyongde/pku-art' },
-          { type: 'site', href: 'https://github.com/zhuozhiyongde/pku-art' },
-          { type: 'doc', href: 'https://docs.arthals.ink/docs/pku-art' }
+          { type: 'github', href: '' },
+          { type: 'site', href: '' },
+          { type: 'doc', href: '' }
         ]
       }
     ]}
   />
+  
+  <!-- 旧项目列表（可折叠） -->
   <Collapse title='Some old projects'>
     <ProjectSection
       projects={[
         {
-          name: '🧩 rehype-autolink-headings-simple',
-          description: 'A simple version of rehype-autolink-headings',
+          name: '',
+          description: '',
           links: [
-            { type: 'github', href: 'https://github.com/cworld1/rehype-autolink-headings-simple' },
+            { type: 'github', href: '' },
             {
               type: 'release',
-              href: 'https://www.npmjs.com/package/rehype-autolink-headings-simple'
+              href: ''
             }
           ]
         },
         {
-          name: 'Gaussian NB',
+          name: '',
           description:
-            'Simulating the Parsimonious Bayesian Algorithm with Python and Finding the Probability Prediction of Breast Cancer ',
-          links: [{ type: 'github', href: 'https://github.com/cworld1/gaussian-nb' }]
+            '',
+          links: [{ type: 'github', href: '' }]
         }
       ]}
     />
   </Collapse>
 
+  <!-- 学习笔记项目展示区 -->
   <h2 id='learnings'>Learnings</h2>
+
   <ProjectSection
     class='my-2'
     projects={[
       {
-        name: 'R Learning',
-        description: 'Some notes and code about learning R language',
+        name: '',
+        description: '',
         links: [
-          { type: 'github', href: 'https://github.com/cworld1/r-learning' },
-          { type: 'site', href: 'https://cworld1.github.io/r-learning' }
+          { type: 'github', href: '' },
+          { type: 'site', href: '' }
         ]
       },
       {
@@ -103,13 +108,14 @@ const headings = [
         links: [
           {
             type: 'github',
-            href: 'https://github.com/zhuozhiyongde/Introduction-To-Computer-System-2023Fall-PKU'
+            href: ''
           }
         ]
       }
     ]}
   />
 
+  <!-- 其他项目展示区 -->
   <h2 id='others'>Others</h2>
   <ProjectSection
     projects={[
@@ -126,53 +132,9 @@ const headings = [
     ]}
   />
 
-  <h2 id='gpg-signature'>GPG Signature</h2>
-  <p>
-    You can verify the authenticity of the files I signed by checking the GPG signature. My GPG key
-    is <code>114514</code>, and you can find it on the opengpg key servers or download from it.
-  </p>
-  <Button href='https://keys.openpgp.org/search?q=114514' title='Checkout my key' target='_blank'>
-    <KeyIcon class='size-5' slot='before' />
-  </Button>
+  
 
-  <h2 id='sponsorship'>Sponsorship</h2>
-  <p>Please leave a message or contact me proactively after sponsorship.</p>
-  <Sponsorship
-    methods={[
-      { name: 'WeChat', icon: 'wechat-pay', image: wechat },
-      { name: 'Alipay', icon: 'alipay', image: alipay }
-    ]}
-  />
-  <p>Thanks to the following sponsors:</p>
-  <Sponsors
-    progressMax={25}
-    sponsors={[
-      { name: 'Arthals', platform: 'Wechat', amount: 50, date: '2025-11-06' },
-      { name: '顾**', platform: 'Wechat', amount: 28, date: '2025-06-23' },
-      { name: 'Anonymous', platform: 'Wechat', amount: 20, date: '2022-04-06' },
-      { name: '华雄 (1300****71)', platform: 'QQ', amount: 5, date: '2019-12-30' },
-      { name: '◌ (1934****45)', platform: 'QQ', amount: 3, date: '2019-12-30' },
-      { name: 'C*a (酷安@暴走の蜗牛)', amount: 2, date: '2019-07-02' }
-    ]}
-  />
+  
+ 
 </PageLayout>
 
-<style>
-  .sponsorship-card {
-    & .sponsorship-card-img {
-      opacity: 0.3;
-      --un-blur: blur(4px);
-      filter: var(--un-blur);
-    }
-
-    &:hover {
-      & .sponsorship-card-icon {
-        opacity: 0;
-      }
-      & .sponsorship-card-img {
-        opacity: 1;
-        --un-blur: blur(0);
-      }
-    }
-  }
-</style>
