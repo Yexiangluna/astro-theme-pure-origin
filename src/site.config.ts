@@ -9,21 +9,21 @@ import type { CardListData, Config, IntegrationUserConfig, ThemeUserConfig } fro
 export const theme: ThemeUserConfig = {
   // [基础配置]
   /** 网站标题，将用于元数据和浏览器标签页标题 */
-  title: 'Astro Theme Pure',
+  title: 'Khalil Cosmos',
   /** 作者名称，将用于首页和版权声明 */
-  author: 'Pure Lab',
+  author: 'Khalil',
   /** 网站描述元数据，可用于页面元数据 */
-  description: 'Stay hungry, stay foolish',
+  description: 'Stay hungry, stay foolish, be water.',
   /** 网站默认图标，应为 `public/` 目录中图片的路径 */
   favicon: '/favicon/favicon.ico',
   /** 网站默认社交卡片图片，应为 `public/` 目录中图片的路径 */
   socialCard: '/images/social-card.png',
   /** 指定此站点的默认语言 */
   locale: {
-    lang: 'en-US',
-    attrs: 'en_US',
+    lang: 'zh-CN',
+    attrs: 'zh_CN',
     // 日期语言环境
-    dateLocale: 'en-US',
+    dateLocale: 'zh_CN',
     dateOptions: {
       day: 'numeric',
       month: 'short',
@@ -58,7 +58,8 @@ export const theme: ThemeUserConfig = {
       { title: 'Projects', link: '/projects' },
       { title: 'Links', link: '/links' },
       { title: 'About', link: '/about' }
-    ]
+    //   { title: 'Notes', link: '/notes' }  待更新
+     ]
   },
 
   /** 配置网站的页脚 */
@@ -67,17 +68,17 @@ export const theme: ThemeUserConfig = {
     year: `© ${new Date().getFullYear()}`,
     // year: `© 2019 - ${new Date().getFullYear()}`,
     links: [
-      // 备案链接
-      {
-        title: 'Moe ICP 114514',
-        link: 'https://icp.gov.moe/?keyword=114514',
-        style: 'text-sm' // Uno/TW CSS 类名
-      },
-      {
-        title: 'Travelling',
-        link: 'https://www.travellings.cn/go.html',
-        style: 'text-sm'
-      },
+      // 备案链接，托管在国内服务器时可启用
+      // {
+      //   title: 'Moe ICP 114514',
+      //   link: 'https://icp.gov.moe/?keyword=114514',
+      //   style: 'text-sm' // Uno/TW CSS 类名
+      // },
+      // {
+      //   title: 'Travelling',
+      //   link: 'https://www.travellings.cn/go.html',
+      //   style: 'text-sm'
+      // },
       // 隐私政策链接
       {
         title: 'Site Policy',
@@ -88,7 +89,7 @@ export const theme: ThemeUserConfig = {
     /** 启用在网站页脚中显示 "Astro & Pure theme powered" 链接 */
     credits: true,
     /** 此站点社交媒体账户的可选详细信息 */
-    social: { github: 'https://github.com/cworld1/astro-theme-pure' }
+    social: { github: 'https://github.com/yexiangluna' }
   },
 
   // [内容配置]
