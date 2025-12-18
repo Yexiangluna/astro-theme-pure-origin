@@ -17,10 +17,10 @@ order: 1
 
 ```bash
 # 使用 bun
-bun create astro@latest --template cworld1/astro-theme-pure
+bun create astro@latest --template Wea1her/astro-theme-pure
 
 # 或克隆仓库
-git clone https://github.com/cworld1/astro-theme-pure.git
+git clone https://github.com/Wea1her/astro-theme-pure.git
 cd astro-theme-pure
 bun install
 ```

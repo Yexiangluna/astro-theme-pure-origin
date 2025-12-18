@@ -89,7 +89,7 @@ export const theme: ThemeUserConfig = {
     /** 启用在网站页脚中显示 "Astro & Pure theme powered" 链接 */
     credits: true,
     /** 此站点社交媒体账户的可选详细信息 */
-    social: { github: 'https://github.com/yexiangluna', telegram: 'https://t.me/jaycupup' }
+    social: { github: 'https://github.com/Wea1her', telegram: 'https://t.me/jaycupup' }
   },
 
   // [内容配置]
