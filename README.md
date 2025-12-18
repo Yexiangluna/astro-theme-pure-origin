@@ -1,103 +1,43 @@
-# Astro Theme Pure
+# Sᴛᴀʏ ʜᴜɴɢʀʏ, sᴛᴀʏ ғᴏᴏʟɪsʜ, 
 
-English | [简体中文](./README-zh-CN.md)
+Web3 Dev 
 
-A simple, fast and powerful blog & document theme built by Astro.
+[![Site](https://img.shields.io/badge/Site%20%e2%86%97-2CA5E0?style=flat&color=black&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjZTRmZGZmIiBkPSJNMTIgMjJDNi40NzcgMjIgMiAxNy41MjMgMiAxMlM2LjQ3NyAyIDEyIDJzMTAgNC40NzcgMTAgMTBzLTQuNDc3IDEwLTEwIDEwbS0yLjI5LTIuMzMzQTE3LjkgMTcuOSAwIDAgMSA4LjAyNyAxM0g0LjA2MmE4LjAxIDguMDEgMCAwIDAgNS42NDggNi42NjdNMTAuMDMgMTNjLjE1MSAyLjQzOS44NDggNC43MyAxLjk3IDYuNzUyQTE1LjkgMTUuOSAwIDAgMCAxMy45NyAxM3ptOS45MDggMGgtMy45NjVhMTcuOSAxNy45IDAgMCAxLTEuNjgzIDYuNjY3QTguMDEgOC4wMSAwIDAgMCAxOS45MzggMTNNNC4wNjIgMTFoMy45NjVBMTcuOSAxNy45IDAgMCAxIDkuNzEgNC4zMzNBOC4wMSA4LjAxIDAgMCAwIDQuMDYyIDExbTUuOTY5IDBoMy45MzhBMTUuOSAxNS45IDAgMCAwIDEyIDQuMjQ4QTE1LjkgMTUuOSAwIDAgMCAxMC4wMyAxMW00LjI1OS02LjY2N0ExNy45IDE3LjkgMCAwIDEgMTUuOTczIDExaDMuOTY1YTguMDEgOC4wMSAwIDAgMC01LjY0OC02LjY2NyIvPjwvc3ZnPg==)](https://0xweather.com/)&nbsp;
+[![RSS](https://img.shields.io/badge/RSS%20%e2%86%97-FFA500?style=flat&color=black&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjZmZlM2QxIiBkPSJNMyAxN2E0IDQgMCAwIDEgNCA0SDN6bTAtN2M2LjA3NSAwIDExIDQuOTI1IDExIDExaC0yYTkgOSAwIDAgMC05LTl6bTAtN2M5Ljk0MSAwIDE4IDguMDU5IDE4IDE4aC0yYzAtOC44MzctNy4xNjMtMTYtMTYtMTZ6Ii8+PC9zdmc+)](https://0xweather.com/rss.xml)&nbsp;
+[![Telegram](https://img.shields.io/badge/TG%20%e2%86%97-2CA5E0?style=flat&color=black&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjY2ZkY2ZmIiBkPSJNMTcuMDk0IDcuMTQ2Yy41OTMtLjIxNS44ODgtLjI5MiAxLjA1LS4zMnEuMDAyLjA4LS4wMDIuMTIyYy0uMjMyIDIuNDQ0LTEuMjUxIDguNDU3LTEuNzc1IDExLjI1NWMtLjEyMi42NTUtLjIxNi45NjctLjg1LjU5NWMtLjQxNi0uMjQ1LS43OTItLjU1My0xLjE5Ni0uODE3Yy0xLjMyNS0uODY5LTMuMjIxLTIuMTYyLTMuMDY1LTIuMDg0Yy0xLjMwNC0uODYtLjc1OC0xLjM4Ni0uMDMtMi4wODhjLjExNy0uMTEzLjI0LS4yMzEuMzYtLjM1NmMuMDU0LS4wNTYuMzE3LS4zLjY4Ny0uNjQ1YzEuMTg4LTEuMTA0IDMuNDg0LTMuMjM5IDMuNTQyLTMuNDg2Yy4wMS0uMDQuMDE4LS4xOTItLjA3MS0uMjcxYy0uMDktLjA4LS4yMjMtLjA1My0uMzE4LS4wMzFxLS4yMDMuMDQ2LTYuNDc0IDQuMjc5cS0uOTE4LjYzLTEuNjY0LjYxNGwuMDA1LjAwM2MtLjY1NS0uMjMxLTEuMzA4LS40My0xLjk2NC0uNjNhNjYgNjYgMCAwIDEtMS4zLS40MDVsLS4zMDgtLjA5OGM0LjUyNy0xLjk3MiA3LjU0Mi0zLjI3IDkuMDUzLTMuODk5YzIuMTk0LS45MTMgMy40OTYtMS40MzggNC4zMi0xLjczOG0yLjQyMy0xLjkyOGExLjggMS44IDAgMCAwLS43MjYtLjM0NmMtLjItLjA0OC0uMzktLjA2My0uNTMzLS4wNmMtLjQ3Ny4wMDgtLjk4OC4xNDMtMS44NDYuNDU0Yy0uODc1LjMxOC0yLjIxOS44NjItNC40MDYgMS43NzFROS42OTEgOCAyLjgwNCAxMS4wMDFjLS40MDQuMTYxLS43NzMuMzQ0LTEuMDY1LjU2Yy0uMjcuMjAxLS42NDcuNTYtLjcxNiAxLjExYy0uMDUyLjQxNi4wNjkuOC4zMTUgMS4xMDNjLjIxNC4yNjMuNDg4LjQyMy42OTcuNTI0Yy4zMS4xNS43MjguMjgxIDEuMDk1LjM5NmMuNTczLjE4IDEuMTQ0LjM2MyAxLjcxOS41MzljMS43NzguNTQ0IDMuMjQyLjk5MiA0Ljg1MiAyLjA1NGMxLjE4MS43NzggMi4zNCAxLjU5IDMuNTIzIDIuMzY2Yy40MzIuMjgzLjgzNS42MDggMS4yOC44N2MuNDg4LjI4NSAxLjEwNi41NDYgMS44Ni40NzdjMS4xMzgtLjEwNSAxLjczLTEuMTUyIDEuOTctMi40M2MuNTIxLTIuNzkgMS41NTctOC44ODYgMS44LTExLjQzMmEzLjggMy44IDAgMCAwLS4wMzctLjg4NWExLjY2IDEuNjYgMCAwIDAtLjU4LTEuMDM1Ii8+PC9zdmc+)](https://t.me/weathercosmos)&nbsp;
+[![visits](https://komarev.com/ghpvc/?username=yexiangluna&style=flat&label=View&base=1000&color=000000)](https://0xweather.com)
 
-[![GitHub deployments](https://img.shields.io/github/deployments/cworld1/astro-theme-pure/production?style=flat&logo=vercel&label=vercel)](https://astro-pure.js.org/)
-[![NPM Version](https://img.shields.io/npm/v/astro-pure?logo=npm&style=flat)](https://www.npmjs.com/package/astro-pure)
-[![GitHub Release](https://img.shields.io/github/v/release/cworld1/astro-theme-pure?include_prereleases&style=flat&label=template)](https://github.com/cworld1/astro-theme-pure/releases)
-[![GitHub License](https://img.shields.io/github/license/cworld1/astro-theme-pure?style=flat)](https://github.com/cworld1/astro-theme-pure/blob/main/LICENSE)
 
-![image](./.github/assets/header.webp)
-![image](./.github/assets/body.webp)
 
-> [!NOTE]
-> Known issues: 1. Header & customize options is still under development (template exposed still). 2. Theme template v4.0.5^ UnoCSS preset changed to PresetMini. If there's any problem, please report as issue.
+<a href="https://next.ossinsight.io/widgets/official/compose-user-dashboard-stats?user_id=132367855" target="_blank" style="display: block" align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://next.ossinsight.io/widgets/official/compose-user-dashboard-stats/thumbnail.png?user_id=132367855&image_size=auto&color_scheme=dark" width="771" height="auto">
+    <img alt="Dashboard stats of @Yexiangluna" src="https://next.ossinsight.io/widgets/official/compose-user-dashboard-stats/thumbnail.png?user_id=132367855&image_size=auto&color_scheme=light" width="771" height="auto">
+  </picture>
+</a>
 
-## Introduction
+<!-- Made with [OSS Insight](https://ossinsight.io/) -->
 
-Checkout [Demo Site →](https://astro-pure.js.org/)
+<!-- https://github.com/lelouchfr/skill-icons -->
 
-### :fire: Features
+### Languages & frameworks
 
-- [x] :rocket: Fast & high performance
-- [x] :star: Simple & clean design
-- [x] :iphone: Responsive design
-- [x] :mag: Full-site search built with [pagefind](https://pagefind.app/)
-- [x] :world_map: Sitemap & RSS feed
-- [x] :spider_web: SEO-friendly
-- [x] :book: TOC (table of contents)
-- [x] :framed_picture: Dynamic open graph generation for posts
-- [x] :framed_picture: Mediumzoom lightbox for images
+[![Languages & frameworks](https://go-skill-icons.vercel.app/api/icons?i=go,rust,java,html,css,js,ts,py,powershell,bash,c,dotnet,astro,react,nextjs,vue,solidity,hardhat,anchor&perline=15)](https://github.com/LelouchFR/skill-icons)
 
-### :package: Components
+<details>
+<summary style="cursor: pointer">More details...</summary>
 
-Theme includes a lot of components, which can not only be used in the theme, but also in other astro projects.
+### Platforms & support tools
 
-> For other astro projects, UnoCSS is required. See [Package README](https://github.com/cworld1/astro-theme-pure/blob/main/packages/pure/README.md#use-with-common-astro-project) for more details.
+[![Platforms & support tools](https://go-skill-icons.vercel.app/api/icons?i=ubuntu,windows,pnpm,docker,git,vscode,ps,pr,cursor,obsidian,chrome&perline=15)](https://github.com/LelouchFR/skill-icons)
 
-- Basic components: `Aside`, `Tabs`, `Timeline`, `Steps`, `Spoiler`...
-- Advanced components: `GithubCard`, `LinkPreview`, `Quote`, `QRCode`...
+</details>
+<br/>
 
-### :white_check_mark: Lighthouse score
+<!-- https://yhype.me/github/profile-views -->
 
-[![lighthouse-score](./.github/assets/lighthouse-score.png)](https://pagespeed.web.dev/analysis/https-cworld-top/o229zrt5o4?form_factor=mobile&hl=en)
+![](https://hit.yhype.me/github/profile?account_id=37377181)
 
-## Documentation
-
-[Docs](https://astro-pure.js.org/docs) | [Showcase](https://github.com/cworld1/astro-theme-pure/issues/10)
-
-## Package
-
-See [astro-theme-pure](https://www.npmjs.com/package/astro-pure) on npm.
-
-## Local development
-
-Environment requirements:
-
-- [Nodejs](https://nodejs.org/): 18.0.0+
-
-Clone the repository:
-
-```shell
-git clone https://github.com/cworld1/astro-theme-pure.git
-cd astro-theme-pure
-```
-
-Useful commands:
-
-```shell
-# install dependencies
-bun install
-
-# start the dev server
-bun dev
-
-# build the project
-bun run build
-
-# preview (after the build)
-bun preview
-
-# create a new post
-bun new
-```
-
-## Contributions
-
-To spend more time coding and less time fiddling with whitespace, this project uses code conventions and styles to encourage consistency. Code with a consistent style is easier (and less error-prone!) to review, maintain, and understand.
-
-## Thanks
-
-- [Astro Cactus](https://github.com/chrismwilliams/astro-theme-cactus)
-- [Astro Resume](https://github.com/srleom/astro-theme-resume)
-- [Starlight](https://github.com/withastro/starlight)
-
-Other third party references are on [Docs#Contributions](https://astro-pure.js.org/docs/advanced/thanks). Appreciate for all open source libraries.
-
-## License
-
-This project is licensed under the Apache 2.0 License.
-
-[![Star History Chart](https://api.star-history.com/svg?repos=cworld1/astro-theme-pure&type=Date)](https://star-history.com/#cworld1/astro-theme-pure&Date)
+<!-- Analytics from: [OSS Insight](https://ossinsight.io/) -->
+<!-- Shields badge fom: https://github.com/alexandresanlim/Badges4-README.md-Profile -->
+<!-- Skill icons from: https://github.com/tandpfun/skill-icons -->
